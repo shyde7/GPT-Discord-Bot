@@ -1,7 +1,8 @@
 import discord
+import os
 from discord.ext import commands
 
-BOT_TOKEN = "BOT_TOKEN"
+BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 CHANNEL_ID = 1225462283971330112
 
 # Define the intents we want to use

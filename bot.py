@@ -1,6 +1,7 @@
 import discord
-import os
 from discord.ext import commands
+import os
+import openai 
 
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 CHANNEL_ID = 1225462283971330112

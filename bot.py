@@ -4,12 +4,18 @@ import os
 import openai 
 
 BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY")
 CHANNEL_ID = 1225462283971330112
 
 # Define the intents we want to use
 intents = discord.Intents.default()
 intents.messages = True
 intents.guilds = True
+
+# Initialize the OpenAI API client
+openai.api_key = OPEN_AI_API_KEY
+
+
 
 
 # Initialize the bot with the desired command prefix and intents
@@ -29,13 +35,14 @@ async def on_ready():
     else:
         print(f"Could not find channel with ID {CHANNEL_ID}")
 
-# A simple command responding to "!hello"
 @bot.command()
-async def hello(ctx):
-    await ctx.send('Hello!')
+async def finditem(ctx, *, question: str):
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=f"Find the item: {question}",
+        max_tokens=100
+    )
+    await ctx.send(response.choices[0].text)
 
-@bot.command()  # Added parentheses to make this a proper decorator
-async def ping(ctx):
-    await ctx.send('Pong!')
 
 bot.run(BOT_TOKEN)

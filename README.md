@@ -39,6 +39,7 @@ cd your-repo-name
 ```
 
 2. Install the following packages:
+
 - pip install discord
 - pip install discord.py
 - pip install openai
@@ -47,7 +48,7 @@ cd your-repo-name
 - pip install flask
 
 3. Set up the environment variables:
-For macOS and Linux:
+   For macOS and Linux:
 
 export DISCORD_BOT_TOKEN='your_discord_bot_token_here'
 export OPENAI_API_KEY='your_openai_api_key_here'
@@ -55,19 +56,21 @@ export OPENAI_API_KEY='your_openai_api_key_here'
 4. Find the .txt file containing all items from [Lucy EQ](https://lucy.allakhazam.com), download this file and use it with the dbPopulator file and insert all the data into your own PostgreSQL Database.
 
 5. Run the bot!
-  Use: ```python3 bot.py```
-   
+   Use: `python3 bot.py`
+
 - This will run the flask server for the bot.
 - Go to [localhost](http://localhost:8080) to invite the bot to your server
 - Specify a channel ID for the bot, (use Discord developer mode)
 
 ### Usage
+
 Once the bot is running and connected to your Discord server, you can use the following commands:
 
-```!finditem <query> ```- Searches for an item based on your query.
+`!finditem <query> `- Searches for an item based on your query.
 
-```!itemdetails <item_id>``` - Retrieves detailed information about an item.
+`!itemdetails <item_id>` - Retrieves detailed information about an item.
 
-  
+### Bot in Action
 
-
+A picture of the bot in action
+![Bot in Action](ChatGPTDiscordBot/Example.png)

@@ -21,7 +21,9 @@ conn_params = {
     'host': 'localhost'
 }
 
-CHANNEL_ID = 1228003840348000319
+#replace with whatever your channel id is 
+#enable discord dev mode and copy and paste it.
+CHANNEL_ID = 1232498730817552506
 
 preferred_channel_id = None
 

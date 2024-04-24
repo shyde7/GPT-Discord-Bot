@@ -66,40 +66,6 @@ def insert_data(filepath):
                     else:
                         conn.commit()
 
-# def insert_spell_data(filepath):
-#     with psycopg2.connect(**conn_params) as conn:
-#         with conn.cursor() as cur:
-#             with open(filepath, 'r', encoding='utf-8') as file:
-#                 reader = csv.reader(file, delimiter='|')
-#                 next(reader)  # Skip the header row if your file has one
-#                 for row in reader:
-#                     if row[0] == "0" and row[1].startswith("Spell:"):  # Adjusted check
-#                         try:
-#                             # Extracting fields based on the example and mapping them
-#                             name = row[1][6:].strip()  # Skip "Spell:" prefix and trim
-#                             lore = row[2].strip()
-#                             # Assuming fixed positions, adjust as necessary
-#                             reqlevel = row[44].strip()
-#                             reclevel = row[43].strip()
-#                             mana = row[30].strip()
-#                             # Placeholder for classes and races; may need processing to fit your schema
-#                             classes = row[35].strip()
-#                             races = row[36].strip()
-#                             price = row[12].strip()
-#                             delay = row[48].strip()
-
-#                             cur.execute("""
-#                                 INSERT INTO spells (
-#                                     name, lore, reqlevel, reclevel, mana, classes, races, price, delay
-#                                 ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-#                                 ON CONFLICT (name) DO NOTHING;
-#                                 """, (name, lore, reqlevel, reclevel, mana, classes, races, price, delay))
-#                         except Exception as e:
-#                             print(f"Error inserting spell: {e}")
-#                             conn.rollback()
-#                         else:
-#                             conn.commit()
-
 
 #Replace with your file path to items.txt, had to use static path for now
 file_path = '/Users/sean/Documents/GPTBot/items.txt'

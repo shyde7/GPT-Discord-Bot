@@ -27,7 +27,7 @@ CHANNEL_ID = 1232498730817552506
 
 preferred_channel_id = None
 
-DISCORD_BOT_TOKEN = 'MTIyODAwMzc2OTM1OTQwMTEwMw.GrK4QD.6lPErP9_nnDJlStf1Q13g5xNaxeL-hxl-PstXY'
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 OPEN_AI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Define the intents we want to use

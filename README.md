@@ -73,6 +73,3 @@ Once the bot is running and connected to your Discord server, you can use the fo
 ### Bot in Action
 
 [Link to Youtube Vid of Bot Example](https://www.youtube.com/watch?v=oV4-e_GJgIk)
-
-A picture of the bot in action
-![Bot in Action](/Users/sean/Documents/GPTBot/ChatGPTDiscordBot/Example.png)
